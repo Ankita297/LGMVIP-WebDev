@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu:wght@300&family=Zen+Tokyo+Zoo&display=swap");
+
+/* Header css  */
+
+.d-block {
+  height: 630px;
+}
+
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.carousel-indicators {
+  left: -63vw;
+  margin: 0;
+  margin-bottom: 4rem;
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  padding: 1% 17% 1% 17%;
+  background-color: transparent;
+}
+
+.title {
+  position: relative;
+}
+
+.header {
+  padding: 0;
+  position: absolute;
+}
+
+.col-10 {
+  padding: 3% 17% 0 17%;
+}
+
+.heading {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem !important;
+  font-weight: bold;
+}
+
+.para-heading {
+  color: #efefef;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-size: 3rem;
+  font-family: "Zen Tokyo Zoo", cursive;
+}
+
+@media only screen and (max-width: 987px) {
+  .navbar {
+    background-color: #fff;
+    color: #000;
+  }
+  .navbar-brand {
+    color: #000 !important;
+    font-size: 2.5;
+  }
+  .col-10 {
+    padding: 6% 8% 1% 8%;
+  }
+  .d-block {
+    height: 670px;
+  }
+}
+
+.carousel .carousel-item:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.nav-link {
+  color: #fff !important;
+  font-size: 1.3rem;
+}
+
+/* welcome section  */
+
+.welcome {
+  text-align: center;
+  padding: 350px 10% 5% 10%;
+}
+
+.text {
+  text-align: left;
+  font-weight: 500;
+  color: grey;
+  line-height: 1.6;
+}
+
+.box {
+  padding: 4%;
+}
+
+.icon {
+  color: #0a1931;
+  margin-bottom: 1.5rem;
+}
+
+.feature-title {
+  text-transform: uppercase;
+  margin-top: 1.4rem 0 0.75rem 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}
+.box button {
+  margin-top: 1rem;
+}
+.feature-box {
+  margin-top: 1.5rem;
+}
+
+.welcome-hr {
+  border-bottom: 2px solid grey;
+}
+
+.pricing {
+  border-right: 2px solid grey;
+}
+.big-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+/* our poppular menu  section  */
+
+.card {
+  background-color: #efefef;
+}
+.card:hover {
+  background-color: #0a1931;
+  color: #fff;
+}
+.card:hover p {
+  color: #fff;
+}
+.card-title {
+  font-family: "Ubuntu";
+  font-weight: bold;
+}
+/* pricing section  */
+
+.main-div {
+  padding: 5% 10%;
+}
+
+/* video section  */
+.wrapper {
+  width: 100%;
+  padding: 3% 0%;
+
+  text-align: center;
+  background: #0a1931;
+}
+h2 {
+  font-family: sans-serif;
+  color: #fff;
+}
+.carousel {
+  margin: 0px auto;
+  width: 100%;
+}
+.slick-slide {
+  margin: 20px;
+}
+.slick-slide video {
+  border: 2px solid #fff;
+  width: 100%;
+}
+.wrapper .slick-dots li button:before {
+  font-size: 20px;
+  color: white;
+  display: none;
+}
+
+/* our team  */
+
+.our-team {
+  text-align: center;
+  position: relative;
+  color: #fff;
+  margin: 2%;
+}
+.our-team img {
+  width: 200px;
+  height: 250px;
+}
+.our-team .pic {
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.our-team .content {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 45%;
+  transform: perspective(1200px) rotateY(-90deg);
+  transform-origin: center left 0;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  overflow: hidden;
+}
+.our-team:hover .content,
+.our-team.active .content {
+  opacity: 1;
+  transform: perspective(1200px) rotateY(0deg);
+}
+.our-team .social {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.our-team .social li {
+  display: inline-block;
+  margin: 2%;
+}
+@media screen and (max-width: 990px) {
+  .our-team {
+    margin-bottom: 30px;
+    margin-left: 20%;
+  }
+}
+.team-div {
+  display: grid;
+  align-items: center;
+}
+/* our dishes  */
+
+.sld-wrp {
+  margin: 0 auto;
+  background-color: #0a1931;
+}
+
+.slider-for {
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+.slider-for img {
+  width: 100%;
+  height: 100%;
+}
+.slide-container {
+  height: 70vh;
+  text-align: center;
+  line-height: 40vh;
+  font-size: 40px;
+  font-weight: bold;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.slider-nav img {
+  width: 100%;
+}
+.slide-btn {
+  text-align: center;
+  box-sizing: border-box;
+  width: 15vw;
+  height: 15vh;
+  cursor: pointer;
+  margin: 0% 1% 0% 0%;
+}
+
+/* newsletter sign up  */
+.jumbotron {
+  /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqiRzZkzm4oWOLYiKkpKteXSTy_x1S3QkC5Q&usqp=CAU); */
+  background-repeat: no;
+  background-size: cover;
+}
+
+input,
+textarea {
+  min-width: 350px;
+  height: 50px;
+  border-radius: 5px 0 0 5px;
+  background: #fff;
+  border: 1px solid #c4c6e2;
+  padding: 16px;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: left;
+  color: #17192f;
+}
+
+.subscribe {
+  height: 50px;
+  font-size: 18px;
+  margin-top: -0.5%;
+  border-radius: 0%;
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* blog section  */
+
+.blog {
+  margin-top: 1.5rem;
+}
+
+.blog-title {
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-family: "Ubuntu";
+  font-weight: bold;
+}
+.blog p {
+  font-weight: 500;
+  color: grey;
+  line-height: 1.6;
+}
+.blog img {
+  width: 275px;
+  height: 150px;
+}
+/* contact us  */
+
+.contact {
+  width: 25vw;
+  margin-left: 3vw;
+  color: #fff;
+}
+.contact-1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: grid;
+  place-content: center;
+}
+
+.contact-1 img {
+  width: 100%;
+  height: 70vh;
+}
+.contact-2 {
+  background-color: #0a1931;
+}
+.contact button {
+  margin-bottom: 2rem;
+}
+
+/* footer  */
+.footer {
+  margin-top: 3%;
+  padding: 3% 10% 2%;
+  font-family: "Ubuntu";
+  font-weight: bold;
+  background-color: #0a1931;
+  color: #fff;
+}
+.footer i {
+  font-size: 20px;
+  text-align: center;
+  margin: 3%;
+
+  font-weight: bold;
+}
+
+.footer h5,
+p {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 767px) {
+  .image {
+    display: none;
+  }
+
+  .pricing {
+    border: none;
+  }
+  input,
+  textarea {
+    min-width: 250px;
+    height: 50px;
+  }
+  .signup {
+    margin-left: 50%;
+  }
+  .contact button {
+    min-width: 250px;
+  }
+  .welcome {
+    text-align: center;
+    padding: 200px 10% 5% 10%;
+  }
+}
+.btn:hover {
+  border: 2px solid #0a1931 !important;
+  background: #fff !important;
+  color: #000 !important;
+}
