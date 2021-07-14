@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Ubuntu:ital,wght@1,300&family=Zen+Loop&family=Zen+Tokyo+Zoo&display=swap');
+
+.brand{
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 2.5rem;
+    word-spacing: 8px;
+color: #fff !important;
+}
+
+.nav{
+    background-color: #054A91;
+    
+}
+.get-btn{
+    font-size: 1.5rem;
+    font-family: "Ubuntu";
+    font-weight: bold;
+    background-color: #DBE4EE;
+    min-width: 200px;
+    box-shadow: rgba(255, 255, 255, 0.8) 0px 2px 8px 0px;
+    color: #000;
+    letter-spacing: 1px;
+    font-family: "Monterrsat";
+    font-weight: bold;
+  
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+}
+.card{
+
+margin: 12%;
+padding: 0% !important;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+background-color: #334257;
+color: #fff;
+
+
+}
+
+.card img,.card-body{
+  width: 70%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  font-family: "Monterrsat";
+  font-weight: bold;
+letter-spacing: 1px;
+
+}
+.card:hover{
+  background-color: #EFEFEF;
+  color: #000;
+  background: linear-gradient(#054A91,#DBE4EE,#81A4CD);
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+  
+  h2 {margin:2rem 0;}
+
+  .lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin-top: 5%;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+    text-align: center;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #000;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
