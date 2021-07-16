@@ -80,7 +80,7 @@ letter-spacing: 1px;
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #000;
+    background: #fff;
     margin: -4px 0 0 -4px;
   }
   .lds-roller div:nth-child(1) {
@@ -147,4 +147,28 @@ letter-spacing: 1px;
       transform: rotate(360deg);
     }
   }
-  
+
+.mydiv {
+  width:100%;
+  min-height: 100vh;
+  color:black;
+  background-color: #054A91;
+  font-weight:bold;
+  animation: myanimation 10s infinite;
+}
+
+@keyframes myanimation {
+  0% {background-color:#97a97c;}
+  10%{background-color:#e63946;}
+  20%{background-color:#f8a68b;}
+  30%{background-color:#83c5be;}
+  40% {background-color:#adb5bd;}
+  50% {background-color:#b5838d;}
+  60% {background-color:#76c893;}
+  70% {background-color:#ee6c4d;}
+  80% {background-color:#a3d6f1;}
+  90% {background-color:#cfaaee;}
+  100% {background-color:#84a59d;}
+
+
+}

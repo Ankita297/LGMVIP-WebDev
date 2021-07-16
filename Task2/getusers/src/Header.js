@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Cards from "./Card";
 import axios from "axios";
 import Loader from "./Loader";
-
+import {Navbar,Button} from "react-bootstrap"
 function Header() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -34,7 +34,7 @@ function Header() {
   };
 
   return (
-    <div>
+    <div >
       <Navbar className="nav mr-auto" expand="lg">
         <Navbar.Brand href="#home" className="brand">
           LGM USERS
@@ -44,7 +44,7 @@ function Header() {
         </Button>
 
       </Navbar>
-      <div>
+      <div >
     {  loading&&<Loader/>}
         <div className="row">
           {data.map((Card) => {
