@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="welcome">Welcome Admin </h2>
+
+        <h3><a href="/logout"><button class="btn btn-danger">Log out</button></a></h3>
+        <br><br>
+        <!-- Nav pills -->
+        <ul class="nav nav-pills ml-auto mr-auto" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active enter" data-toggle="pill" href="#add">Enter Result</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link enter" data-toggle="pill" href="#update">Update Result</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link enter" data-toggle="pill" href="#view">View Details</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link enter" data-toggle="pill" href="#delete">Delete Details</button>
+          </li>
+
+        </ul>
+      <br><br>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div id="add" class="container tab-pane active"><br>
+            <h3 class="sub-heading">Student's details</h3>
+            <div class="hr" style="margin-left: 0%"></div><br>
+
+	<form action="/dashboard" method="POST" autocomplete="off" >
+		<tr>
+			<td><input class="input-box" type="text" name="name" placeholder="Student Name"></td>
+		</tr>
+        <tr>
+			<td><input class="input-box" type="text" name="class" placeholder="Enter your class"></td>
+		</tr>
+
+		<tr>
+			<td><input class="input-box" type="text" name="rollNo" placeholder="Roll Number"></td>
+		</tr>
+		<tr>
+			<td><input class="input-box" type="text" name="fatherName" placeholder="Father's Name"></td>
+		</tr>
+		<tr>
+			<td><input class="input-box" type="date" name="dob" placeholder="DD-MM-YYYY"></td>
+		</tr>
+		<tr>
+			<td><input class="input-box" type="text" name="mobileNo" placeholder="Contact Number"></td>
+		</tr><br><br>
+		<tr align="center">
+      <h3 class="sub-heading">Marks details</h3>
+      <div class="hr" style="margin-left: 0%"></div><br>
+
+		</tr>
+		<tr>
+
+			<td><input class="input-box" type="number" name="maths" placeholder="Marks in Maths:"></td>
+		</tr>
+		<tr>
+			<td><input class="input-box" type="number" name="eng" placeholder="Marks in English:"></td>
+		</tr>
+		<tr>
+			<td><input class="input-box" type="number" name="phy" placeholder="Marks in Maths:"></td>
+		</tr>
+		<tr>
+			<td><input class="input-box" type="number" name="chem" placeholder="Marks in Chemistry"></td>
+		</tr>
+		<tr>
+			<td><input class="input-box" type="number" name="hindi" placeholder="Marks in Hindi"></td>
+		</tr>
+		<tr><br><br><br>
+			<td colspan="2"><button class="button button2" type="submit" name="Submit" style="vertical-align:middle">
+                Submit 
+            </button></td><br><br>
+		</tr>
+	</form>
+          </div>
+          <div id="update" class="container tab-pane fade"><br>
+            <h3 class="sub-heading">Update Result</h3>
+            <div class="hr" style="margin-left: 0%;"></div>
+
+            <form action="/update" method="post" autocomplete="off" ><br>
+                <br>
+                <font color="#0303AC"></font>
+                  <h3 class="sub-heading2" style="color:#fff">Enter Roll No to update</h3>
+                </font>
+                <input class="input-box" type="VALUE" name="rollno" placeholder="ROLL NUMBER"  style="margin-left: -0.5%;"><br><br>
+                <button class="button button2" type="submit"  name="Submit" style="vertical-align:middle; margin-top: 10px">
+                    <span>Submit </span
+                </button>
+            </form>
+              </div>
+          <div id="view" class="container tab-pane fade"><br>
+            <h3 class="sub-heading">View Results</h3>
+            
+            <div class="hr" style="margin-left: 0%;"></div>
+          <br><br><br>
+            <div class="container">
+              <table class="table table-bordered" style="background-color: #fff;">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Roll No</th>
+                    <th>See Profile</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                <%  students.forEach(function(student){ %>
+                  <tr>
+                    <td><%=student.name %></td>
+                    <td><%= student.class %></td>
+                    <td><%= student.rollNo %></td>
+                   <td style="text-align: center;"><a href="/profile/<%=student._id %>"><i class="fas fa-user"></i></a></td>
+                  </tr>
+
+                <%  }) %>
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+          <div id="delete" class="container tab-pane fade"><br>
+            <form action="/delete" method="post" ><br>
+              <h3 class="sub-heading">Delete Result</h3>
+              <div class="hr" style="margin-left: 0%;"></div>
+<br>
+              <br>
+                    <h3 class="sub-heading2" style="color:#fff;">                    Enter Roll Number to delete
+                    </h3>
+
+                
+                <input class="input-box" type="VALUE" name="rollno" placeholder="ROLL NUMBER"  style="margin-left: -0.5%;"><br>
+                <button class="button button2" type="submit" name="Submit" style="vertical-align:middle; margin-top: 10px">
+                    <span>Submit </span>
+                </button>
+            </form>
+                      </div>
+
+        </div>
+
+      </div>
+      
+
+</body>

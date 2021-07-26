@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+  body {
+    background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-sm  navbar-light" style="  background-color: #03045e;
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  ">
+    <a class="navbar-brand" style="  color: #f1faee !important;
+    font-size: 2.5rem;
+    font-family: 'Asul', sans-serif;
+  " href="/"><i class="fas fa-school"></i> SRMS</a>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link links" style="  color: #fff !important;
+        font-size: 1.5rem;
+      " href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link links" style="  color: #fff !important;
+        font-size: 1.5rem;
+      " href="/">Admin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link links" style="  color: #fff !important;
+        font-size: 1.5rem;
+      " href="/">| Student</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- Student Profile -->
+  <div class="student-profile py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card shadow-sm">
+            <div class="card-header bg-transparent text-center">
+              <i class="fas fa-user prodile_img fa-4x"></i>
+            </div>
+            <div class="card-body" style="text-align: center;">
+              <h3>
+                <%= student[0].name %>
+              </h3>
+
+              <p class="mb-0"><strong class="pr-1">Roll No:</strong>
+                <%= student[0].rollNo %>
+              </p>
+              <p class="mb-0"><strong class="pr-1">Class:</strong>
+                <%= student[0].class %>
+              </p>
+            </div>
+          </div>
+          <br><br>
+        </div>
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
+            </div>
+            <div class="card-body pt-0">
+              <table class="table table-bordered">
+                <tr>
+                  <th width="30%">Father's Name</th>
+                  <td width="2%">:</td>
+                  <td>
+                    <%= student[0].fatherName %>
+                  </td>
+                </tr>
+                <tr>
+                  <th width="30%">DOB</th>
+                  <td width="2%">:</td>
+                  <td>
+                    <%= student[0].dob %>
+                  </td>
+                </tr>
+                <tr>
+                  <th width="30%">Contact</th>
+                  <td width="2%">:</td>
+                  <td>
+                    <%= student[0].mobileNo %>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container">
+    <div class="col-lg-8">
+      <div class="card shadow-sm">
+        <div class="card-header bg-transparent border-0">
+          <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Marks Information</h3>
+        </div>
+        <div class="card-body pt-0">
+          <table class="table table-bordered">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Subjects</th>
+                  <th>Marks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Maths</td>
+
+                  <td>
+                    <%=student[0].maths %>
+                  </td>
+                </tr>
+                <tr>
+
+                  <td>English</td>
+                  <td>
+                    <%= student[0].eng %>
+                  </td>
+
+                </tr>
+                <tr>
+
+                  <td>Hindi</td>
+                  <td>
+                    <%= student[0].hindi %>
+                  </td>
+
+                </tr>
+                <tr>
+
+                  <td>Physics</td>
+                  <td>
+                    <%= student[0].phy %>
+                  </td>
+
+                </tr>
+                <tr>
+
+                  <td>Chemistry</td>
+                  <td>
+                    <%= student[0].chem %>
+                  </td>
+
+                </tr>
+
+                </tr>
+
+
+              </tbody>
+            </table>
+
+            <br><br>
+
+
+        </div>
+      </div>
+    </div> <br><br>
+    <button type="button" class="btn btn-success" onclick="window.print()">Print the result</button>
+    <br><br>
+    &nbsp;&nbsp;&nbsp;
+    <!-- <form action="/updateResult/<%=student[0]._id %>" method="POST">
+         <button class="btn btn-primary" type="submit" name="Submit" style="vertical-align:middle; margin-top: 10px">
+Update Result
+         </button> &nbsp;&nbsp; &nbsp;</form>
+         <form action="/delete/<%=student[0]._id %>">
+        <button class="btn btn-danger" type="submit" name="Submit" style="vertical-align:middle; margin-top: 10px">
+            Delete Result
+                    </button>
+            <br><br></form> -->
+
+  </div>

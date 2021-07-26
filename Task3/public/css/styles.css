@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Asul:wght@700&family=Montserrat:wght@200&family=Ubuntu:wght@300&display=swap");
+
+nav {
+  background-color: #03045e;
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+body {
+  background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+}
+.navbar-brand {
+  color: #f1faee !important;
+  font-size: 2.5rem;
+  font-family: "Asul", sans-serif;
+}
+.links {
+  color: #fff !important;
+  font-size: 1.5rem;
+  font-family: "Asul", sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  font-family: proxima-nova, sans-serif;
+  color: #111;
+  font-size: 18px;
+  text-align: left;
+  margin: auto;
+}
+
+tr,
+th,
+td {
+  border: 1px solid #808080;
+}
+
+th,
+td {
+  padding: 10px 30px 10px 10px;
+}
+
+th {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: none;
+}
+.box1 {
+  border: 2px solid black;
+}
+.col-5,
+.col-7 {
+  background-color: #fff;
+}
+.table-div {
+  padding: 3% 8%;
+}
+.success {
+  background-color: rgb(107, 228, 107);
+}
+
+:root {
+  --main-bg-color: #009d63;
+  --main-text-color: #009d63;
+  --second-text-color: #c1efde;
+}
+
+.primary-text {
+  color: var(--main-text-color);
+}
+
+.second-text {
+  color: var(--second-text-color);
+}
+
+.primary-bg {
+  background-color: var(--main-bg-color);
+}
+
+.seondary-bg {
+  background-color: var(--second-text-color);
+}
+.rounded-full {
+  border-radius: 100%;
+}
+
+#wrapper {
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    to right,
+    #baf3d2,
+    #c2f5de,
+    #cbf7e4,
+    #d4f8ea,
+    #ddfaef
+  );
+  background-color: #808080;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebae-wrapper .sidebar-heading {
+  padding: 0.87rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggle #sidebar-wrapper {
+  margin-left: 0;
+}
+#menu-toogle {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+}
+
+.list-group-item.active {
+  background-color: transparent;
+  color: var(--main-text-color);
+  border: none;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+/* sign up  */
+
+.form-wrap {
+  background-color: #fff;
+  width: 320px;
+  margin: 3em auto;
+  box-shadow: 0px 1px 8px #bebebe;
+  -webkit-box-shadow: 0px 1px 8px #bebebe;
+  -moz-box-shadow: 0px 1px 8px #bebebe;
+}
+.form-wrap .tabs {
+  overflow: hidden;
+}
+.form-wrap .tabs h3 {
+  float: left;
+  width: 50%;
+}
+.form-wrap .tabs h3 a {
+  padding: 0.5em 0;
+  text-align: center;
+  font-weight: 400;
+  background-color: #e6e7e8;
+  display: block;
+  color: #666;
+}
+.form-wrap .tabs h3 a.active {
+  background-color: #fff;
+}
+.form-wrap .tabs-content {
+  padding: 1.5em;
+}
+.form-wrap .tabs-content div[id$="tab-content"] {
+  display: none;
+}
+.form-wrap .tabs-content .active {
+  display: block !important;
+}
+.form-wrap form .input {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  padding: 0.8em 0 10px 0.8em;
+  border: 1px solid #cfcfcf;
+  outline: 0;
+  display: inline-block;
+  margin: 0 0 0.8em 0;
+  padding-right: 2em;
+  width: 100%;
+}
+.form-wrap form .button,
+.button {
+  width: 100%;
+  padding: 0.8em 0 10px 0.8em;
+  background-color: #28a55f;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.form-wrap form .button:hover {
+  background-color: #4fda8c;
+}
+.form-wrap form .checkbox {
+  visibility: hidden;
+  padding: 20px;
+  margin: 0.5em 0 1.5em;
+}
+.form-wrap form .checkbox:checked + label:after {
+  opacity: 1;
+}
+.form-wrap form label[for] {
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.form-wrap form label[for]:before {
+  content: "";
+  position: absolute;
+  border: 1px solid #cfcfcf;
+  width: 17px;
+  height: 17px;
+  top: 0px;
+  left: -14px;
+}
+.form-wrap form label[for]:after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background-color: transparent;
+  top: 4px;
+  left: -10px;
+  border: 3px solid #28a55f;
+  border-top: none;
+  border-right: none;
+}
+.form-wrap .help-text {
+  margin-top: 0.6em;
+}
+.form-wrap .help-text p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #48cae4;
+}
+.welcome {
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 3px, rgba(0, 0, 0, 0.1) 0px 8px 13px,
+    rgba(0, 0, 0, 0.1) 0px 18px 23px;
+  letter-spacing: normal;
+  font-size: 4em;
+
+  border-bottom: 5px solid #d00000;
+  font-family: "Asul", sans-serif;
+}
+button.nav-link {
+  margin-left: 10%;
+  background-color: #e63946;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 3%;
+}
+.input-box {
+  padding: 1%;
+  margin: 3%;
+  min-width: 300px;
+}
+
+.sub-heading {
+  color: #fff;
+  font-family: "Asul", sans-serif;
+
+  font-size: 2rem !important;
+}
+
+.button2 {
+  width: 25%;
+}
+.sub-heading2 {
+  color: #1d3557;
+  font-family: "Asul", sans-serif;
+}
+
+.sub-text {
+  color: #fff;
+  font-size: 3rem;
+  font-family: "Asul", sans-serif;
+}
+.hr {
+  border-top: 3px solid #fff;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.enter {
+  /* background-color: #caf0f8 !important; */
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 3%;
+  font-family: "Asul", sans-serif;
+  color: #1d3557 !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: block;
+  font-family: "Asul", sans-serif;
+}
+.input-box {
+  margin: 1%;
+}
+.student-profile .card {
+  border-radius: 10px;
+}
+
+.student-profile .card .card-header .profile_img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 10px auto;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+}
+
+.student-profile .card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.student-profile .card p {
+  font-size: 16px;
+  color: #000;
+}
+
+.student-profile .table th,
+.student-profile .table td {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #000;
+}
+
+.tab-content{
+  background-color: #1d3557;
+  padding-bottom: 10%;
+  width: 100%;
+}
+.tabs{
+
+  background-color:transparent;
+}
+
+.marks{
+  font-family: "Asul", sans-serif;
+
+}

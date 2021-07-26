@@ -1,0 +1,63 @@
+<%- include('partials/navbar') %>
+<style>
+  body{
+    background-image: none;
+  }
+</style>
+<h1 style="text-align: center" class="marks">MARKSHEET OF STUDENT</h1>
+<br />
+<div class="container">
+  <div class="row box1">
+    <div class="col-5">
+      <h1><%= student[0].name %></h1>
+    </div>
+    <div class="col-7">
+      Roll No: <%=student[0].rollNo %><br />
+      Class: <%= student[0].class %><br />
+
+      Father'sName : <%= student[0].fatherName %><br />
+    </div>
+  </div>
+</div>
+<hr />
+<div class="table-div">
+  <table class="table" style="background-color: #fff">
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Marks Scored</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Maths</td>
+        <td><%=student[0].maths %></td>
+      </tr>
+      <tr>
+        <td>English</td>
+        <td><%= student[0].eng %></td>
+      </tr>
+      <tr>
+        <td>Chemistry</td>
+        <td><%=student[0].chem %></td>
+      </tr>
+      <tr>
+        <td>Hindi</td>
+        <td><%= student[0].hindi %></td>
+      </tr>
+      <tr>
+        <td>Physics</td>
+        <td><%= student[0].phy %></td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <div class="alert alert-success primary">
+    <strong> Success !</strong> You have
+    <a href="#" class="alert-link">qualify the exams</a>.
+  </div>
+  <br />
+  <button type="button" class="btn btn-primary" onclick="window.print()">
+    Print the result
+  </button>
+</div>
